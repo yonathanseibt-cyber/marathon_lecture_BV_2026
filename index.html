@@ -69,10 +69,9 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Tu peux modifier les données ici -->
         <tr>
           <td>0</td>
-          <td>10VG4</td></td>
+          <td>10VG4</td>
           <td>60 pts</td>
         </tr>
         <tr>
@@ -90,67 +89,67 @@
           <td>12RAC01</td>
           <td>46.2 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>9VP2</td>
           <td>83.3 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>ACC22</td>
           <td>73.3 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>11VG2</td>
           <td>69.2 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>10VP1</td>
           <td>70.7 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>9VP1</td>
           <td>63 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>8P4</td>
           <td>87.5 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>8P7</td>
           <td>90 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>10VP3</td>
           <td>75.7 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>ACC10</td>
           <td>66.7 pts</td>
         </tr>
-       <tr>
+        <tr>
           <td>0</td>
           <td>10VP2</td>
           <td>89.3 pts</td>
         </tr>
-      <tr>
+        <tr>
           <td>0</td>
           <td>12RAC02</td>
           <td>85.7 pts</td>
         </tr>
-      <tr>
+        <tr>
           <td>0</td>
           <td>12RAC05</td>
           <td>85.7 pts</td>
         </tr>
-      <tr>
+        <tr>
           <td>0</td>
           <td>9VG3</td>
           <td>89.5 pts</td>
@@ -164,14 +163,13 @@
   </div>
 
   <script>
-    // Tri automatique du tableau par score
     function trierTableau() {
       const table = document.getElementById("classement").getElementsByTagName("tbody")[0];
       const lignes = Array.from(table.rows);
 
       lignes.sort((a, b) => {
-        const scoreA = parseInt(a.cells[2].innerText);
-        const scoreB = parseInt(b.cells[2].innerText);
+        const scoreA = parseFloat(a.cells[2].innerText.replace(',', '.'));
+        const scoreB = parseFloat(b.cells[2].innerText.replace(',', '.'));
         return scoreB - scoreA;
       });
 
@@ -186,4 +184,3 @@
 
 </body>
 </html>
-
